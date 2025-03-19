@@ -1,0 +1,18 @@
+const fs = require('fs');
+
+// Read from 0-index.html
+fs.readFile('0-index.html', 'utf8', (err, data) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+
+    // Write to 1-index.html
+    fs.writeFile('1-index.html', data, (err) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log('Content copied successfully.');
+    });
+});
