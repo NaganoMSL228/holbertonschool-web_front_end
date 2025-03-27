@@ -220,7 +220,7 @@
   }
 
 
-  .card-work .card-title {
+  .card-work .card-title{
 	text-align: center;
 	margin: 0;
 	opacity: 0;
@@ -238,8 +238,8 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	left: 0;
 	bottom: 0;
+	left: 0;
 	content: "";
   }
 
@@ -275,8 +275,22 @@
 
   .card-testimonial .card-quote cite {
 	display: block;
-	padding-top: 1rem;
+	padding: 1 0 0;
 	color: var(--color-primary);
+  }
+
+  .card-testimonial .card-quote {
+	position: relative;
+  }
+
+  .card-testimonial .card-quote::before {
+	content: '\201C';
+	position: absolute;
+	top: -4.5rem;
+	left: -1rem;
+	color: #efeded;
+	font-size: 10rem;
+	z-index: -1;
   }
 
   .section-footer {
